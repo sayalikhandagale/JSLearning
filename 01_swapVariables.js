@@ -1,0 +1,21 @@
+console.log("----------------------Swap Two Variable--------------------------------");
+var n1 = "Sweety"; 
+var n2 = "Cutie"; 
+console.log( 'Before Swap :- n1 ==>'  , n1);
+console.log( 'Before Swap :- n2 ==> ', n2);
+var temp = n1;
+n1 = n2;
+n2 = temp;
+console.log( 'After Swap :- n1 ==>' , n1);
+console.log( 'After Swap :- n2 ==>', n2);
+
+console.log("----------------------Swap Three Variable-------------------------");
+var num1 = 100;
+var num2 = 200;
+var num3 = 300;
+console.log('Before Swap :- num1 ==> ', num1 , ' num2 ==> ', num2 , 'num3 ==>', num3);
+var temp = num1;
+num1=num2;
+num2=num3;
+num3=temp;
+console.log( 'After Swap :- num1 ==> ', num1 , ' num2 ==> ', num2 , 'num3 ==>', num3);
