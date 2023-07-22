@@ -13,22 +13,19 @@ var collegeName= "Kirti college";
 console.log("First Name:-", firstName, "Last Name:-", lastName,    "College Name:-", collegeName );
 
 console.log("---------------------------------------Step 3-------------------------------------------------------");
-var value1 = "Virat"; 
-var value2 = "Anushka";
-console.log( 'Before Swaping ==>' ,'value1 :- ', value1, 'value2 :- ', value2);
-var temp = value1;
-value1 = value2;
-value2 = temp;
-console.log( 'After Swaping ==>' ,'value1 :- ', value1, 'value2 :- ', value2);
-
-
+function swapValues(Argument1, Argument2){ 
+    console.log('Before Swap=> Argument1 :-', Argument1 , " Argument2 :-", Argument2 );
+    var temp = Argument1;
+    Argument1 = Argument2;
+    Argument2 = temp;
+    console.log('After Swap=> Argument1 :-', Argument1, " Argument2 :-", Argument2 );
+}
+var name1="Virat";
+var name2="Anushka";
+swapValues(name1,name2);
 var num1 = 1000; 
 var num2 = 2000;
-console.log( 'Before Swaping==>' ,'num1 :- ', num1, ' num2 :- ', num2);
-var temp = num1;
-num1 = num2;
-num2 = temp;
-console.log( 'After Swaping==>' ,'num1 :- ', num1, ' num2 :- ', num2);
+swapValues(num1,num2);
 
 console.log("---------------------------------------Step 4---------------------------------------------------------");
 function addition( arg1, arg2, arg3)
