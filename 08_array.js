@@ -80,3 +80,44 @@ console.log(array);
 var array = [10, 20, 30, 50, 10, 80, 20];
 array.splice(4, 2, 33, 55, 66, 77 );
 console.log(array);
+
+console.log(`------ concat ----------`);
+let array1 = [3, 4, 5, 6];
+let array2 = [6, 7, 8, 9];
+let array3 = array1.concat(array2);
+console.log(array3);
+
+console.log(`------ join ----------`);
+let result = array1.join(",");
+console.log(result);
+
+let res = array2.join("|");
+console.log(res);
+
+console.log(`------ for of loop ----------`);
+for (const element of array3) {
+    console.log(element);
+}
+
+console.log(`------ array resize ----------`);
+let array4 = [4, 5, 6, 7, 8, 9];
+array4.length = 3;
+console.log(array4);
+
+console.log(`------ spread operator ... ----------`);
+let array5 = [4, 5, 6, 7, 8, 9];
+console.log(array5);
+console.log(...array5);
+
+
+console.log(`.........Write a program to remove duplicate elements from array.........`);
+const getUniqueArray = (arr) =>  {
+    var result = [];
+    for (var i=0, l=arr.length; i<l; i++)
+        if (result.indexOf(arr[i]) === -1 && arr[i] !== '')
+            result.push(arr[i]);
+    return result;
+}
+
+console.log(getUniqueArray([4, 5, 4, 5, 8, 5, 7, 8, 9, 7, 8]));
+
