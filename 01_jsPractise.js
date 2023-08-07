@@ -175,3 +175,173 @@ var wordLength=function(str){
 }
 wordLength("sayli Khandagale");
 wordLength("saiKhandagale");
+
+console.log(`-----------------------------Write a program to print numbers from 1 to 10 by incrementing 1-------------------------------`);
+// for loop
+var result = " ";
+for (let index = 1; index <= 10; index++) {
+    result = result.concat(index).concat(" ");   
+}
+console.log(result);
+
+console.log(`-----------------------------Write a program to print numbers from 20 to 10 by decrementing 1-------------------------------`);
+// while loop 
+var res = " "
+var i = 20;
+while (i>=10) {
+    res = res.concat(i).concat(" ");
+    i--;
+}
+console.log(res);
+
+console.log(`...............................................Array..............................................................`);
+var array = [10, 20, 30, 40, 50, 60];
+console.log(`Array is [ ${array}]`);
+var element = array[0];
+var arrayLength = array.length-1;
+var elementLast = array[array.length-1];
+console.log(`First Position is : [${element}] and Last Position is : [${elementLast}]`);
+
+var res = " ";
+for (let index = 0; index < array.length; index=index+2) {
+    const element = array[index];
+    res = res.concat(element).concat(" ");
+    
+}
+console.log(`Even Numbers are [${res}]`);
+
+var a = " ";
+for (let index = 1; index < array.length; index=index+2) {
+    const element = array[index];
+    a = a.concat(element).concat(" ");
+}
+console.log(`Odd Numbers are [${a}]`);
+
+var count = 0;
+for (let index = 1; index < array.length; index=index+2) {
+    const element = array[index];
+    count = count+element
+}
+console.log(`Even Positioned are ${count}`);
+
+var count = 0;
+for (let index = 0; index < array.length; index=index+2) {
+    const element = array[index];
+    count = count+element
+}
+console.log(`odd Positioned are ${count}`);
+
+for (let index = 0; index < array.length; index++)
+     {
+        const element = array[index];
+        var count=count+element    
+        
+    }
+    console.log(`Sum of total Number count: ${count}`);
+
+for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+    if (element%5==0) {
+        
+        console.log(`All multiply by 5 ${element}`);
+    }
+}
+
+console.log(`...............................................Set..............................................................`);
+let set = new Set();
+set.add(4);
+set.add(5);
+set.add(9);
+set.add(8);
+console.log(set);
+
+set.add(7); // add element in the element
+console.log(set);
+
+let isAvailable = set.has(8); // whether that number is available or not
+console.log(isAvailable);
+
+set.delete(5); // delete element
+console.log(set);
+
+var array = [10, 20, 30, 40, 50, 60];
+let setOfNumbers = new Set();
+for (const value of array) {
+    setOfNumbers.add(value);
+}
+console.log(array);
+console.log(setOfNumbers);
+
+console.log(`Removing duplicate elements from array using spread operator`);
+let arrayNew = [10, 20, 30, 40, 50, 60, 70, 80, 90, 40, 50];
+arrayNew = [...new Set(arrayNew)];
+console.log(arrayNew);
+
+console.log(`...............................................Map..............................................................`);
+let map = new Map();
+map.set("name", "sayli");
+map.set("State", "maharashtra");
+map.set("country", "India");
+map.set("isMarried", false);
+map.set("height", "5ft");
+map.set("skills", ["C", "python"]);
+console.log(map);
+console.log(`map sizing is ${map.size}`);
+
+map.set("qualification" , "Bsc IT"); // add qualification in keys and values
+console.log(map);
+
+map.set("height", "4ft"); // once it update it will show that only not past value
+
+let skills = map.get("skills"); // get skills
+console.log(skills);
+
+map.delete("isMarried"); // delete element
+console.log(map); 
+
+console.log(map.keys()); // show all keys
+console.log(map.values()); // show all values
+
+console.log(`----------------------------------Traversing map------------------------------------------------------------`);
+let keys = map.keys(); // it will show keys and values
+for (const key of keys) {
+    console.log(`${key} ==> ${map.get(key)}`);
+}
+console.log(`................................................Object...............................................................`);
+let person = {
+    name : "sayli",
+    age : 21,
+    state : "Maharashtra",
+    country : "India",
+    city : "Mumbai",
+    address : {
+      pincode : 400078,
+      street : "Bhandup",
+      landmark : "Near school",
+      getAddress : function(){
+        console.log(`${this.pincode}, ${this.street}, ${this.landmark}`);
+      }
+    },
+    list : ["Chirag", "Akshada", "Rutik", "Sayli", "Atharva"]
+}
+console.log(person);
+
+person.address.getAddress();
+person.list.push("Vishal")
+console.log(person.list);
+
+let keysperson = Object.keys(person);
+console.log(keysperson);
+let valuesperson = Object.values(person);
+console.log(valuesperson);
+
+console.log(`----------Traversing an object ------------ `);
+for (const key in person) {
+    if (Object.hasOwnProperty.call(person, key)) {
+        const element = person[key];
+        console.log(`Key: ${key}, value : ${element}`); 
+    }
+}
+
+
+let isAvailable1= "state" in person;
